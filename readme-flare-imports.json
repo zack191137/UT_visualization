@@ -1,0 +1,43 @@
+[{
+	"name": "Judge.zhangzhang",
+	"size": 3938,
+	"imports": ["word.hello", "word.yes", "word.no"]
+}, 
+{
+	"name": "Judge.shangce",
+	"size": 3938,
+	"imports": ["word.hello", "word.i", "word.you"]
+}, 
+{
+	"name": "Judge.xiaoning",
+	"size": 3938,
+	"imports": ["word.hello", "word.yes", "word.you"]
+}, 
+{
+	"name": "Judge.kiko",
+	"size": 3938,
+	"imports": ["word.no", "word.yes", "word.i"]
+},
+{
+	"name": "word.hello",
+	"size": 3812,
+	"imports": []
+},
+{
+	"name": "word.you",
+	"size": 3812,
+	"imports": []
+},
+{
+	"name": "word.i",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.yes",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.no",
+	"size": 3812,
+	"imports": []
+}]

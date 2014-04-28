@@ -1,0 +1,114 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="colorbrewer.js"></script>
+	<script src="../js/jquery/jquery.widget.min.js"></script>
+	<script src="../js/metro/metro-dropdown.js"></script>
+	<script src="../js/docs.js"></script>
+	<link rel="stylesheet" href="../css/metro-bootstrap.css">
+	<link rel="stylesheet" href="../css/docs.css">
+	<link href="../css/metro-bootstrap-responsive.css" rel="stylesheet">
+	<style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		#map {
+			width: 100%;
+			height: 100%;
+			background: black;
+		}
+		#menu {
+			position: absolute;
+			top: 5px;
+			left: 10px;
+			width: 200px;
+			height: 60px;
+			background: transparent;
+			z-index: 10;
+		}
+		#checkmenu {
+			position: absolute;
+			top: 5px;
+			left: 300px;
+			width: 300px;
+			height: 60px;
+			background: transparent;
+			z-index: 10;
+		}
+		#checkbox {
+			float: left;
+		}
+		.node {
+			stroke: #fff;
+			stroke-width: 1.5px;
+		}
+		.link {
+			stroke-width: 5;
+			stroke: #999;
+			stroke-opacity: 0.6;
+		}
+		.node.fixed {
+			fill: #f00;
+		}
+		label,
+		text {
+			pointer-events: none;
+			font-family: "Trebuchet MS";
+		}
+		div.tooltip {
+			position: absolute;
+			text-align: center;
+			
+			padding: 2px;
+			font: 12px sans-serif;
+			background: lightsteelblue;
+			border: 0px;
+			border-radius: 8px;
+			pointer-events: none;
+		}
+	</style>
+	<script type="text/javascript" src="supereme.js">
+	</script>
+	<title>About</title>
+</head>
+
+<body class="metro">
+	<header class="bg-dark" data-load="../recourse/header.html"></header>
+	<div class="grid container">
+		<div class="row">
+			
+			<div class="span12 padding10 bg-grayLighter">
+				<input type="checkbox" name="chk_group[]" value="0" />HHBurton
+				<input type="checkbox" name="chk_group[]" value="1" />RHJackson
+				<input type="checkbox" name="chk_group[]" value="2" />WODouglas
+				<input type="checkbox" name="chk_group[]" value="3" />FFrankfurter
+				<input type="checkbox" name="chk_group[]" value="4" />SFReed
+				<input type="checkbox" name="chk_group[]" value="5" />HLBlack
+				<input type="checkbox" name="chk_group[]" value="6" />WBRutledge
+				<input type="checkbox" name="chk_group[]" value="7" />FMurphy
+				<input type="checkbox" name="chk_group[]" value="8" />FMVinson
+				<a class="button" id="selectall">SelectAll</a>	<a class="button" id="unselectall">unSelectAll</a>	
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12 padding20 bg-grayLighter">
+				<div id="network"></div>
+			</div>
+		</div>
+	</div>
+	<footer class="bg-dark no-margin no-padding">
+		<div class="container tertiary-text bg-dark fg-white">2012-2013, Metro UI CSS &copy; by <a href="mailto:sergey@pimenov.com.ua" class="fg-yellow">Sergey Pimenov</a>
+		</div>
+	</footer>
+</body>
+
+</html>

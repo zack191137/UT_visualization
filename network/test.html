@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="colorbrewer.js"></script>
+	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	
+	<style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		#map {
+			width: 100%;
+			height: 100%;
+			background: black;
+		}
+	
+		#menu {
+			position: absolute;
+			top: 5px;
+			left: 10px;
+			width: 200px;
+			height: 60px;
+			background: transparent;
+			z-index: 10;
+		}
+		#checkmenu {
+			position: absolute;
+			top: 5px;
+			left: 300px;
+			width: 300px;
+			height: 60px;
+			background: transparent;
+			z-index: 10;
+			
+		}
+		#checkbox{
+			float: left;
+		}
+		.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+stroke-width:5;
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+.node.fixed {
+  fill: #f00;
+}
+label,text {
+  pointer-events: none;
+  font-family:"Trebuchet MS";
+  
+}
+	</style>
+	<script type="text/javascript" src="graph.js">
+			</script>
+	
+</head>
+
+<body>
+
+<div id="network">
+	<div id='menu'>
+		<p>
+			<label for="amount">Level range:</label>
+			<input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider-range"></div>
+		
+
+	</div>
+	<div id='checkmenu'>
+		<input type="checkbox" name="chk_group[]" value="0" />CHEN
+		<input type="checkbox" name="chk_group[]" value="1" />BRYSON
+		<input type="checkbox" name="chk_group[]" value="2" />REYNA
+		<input type="checkbox" name="chk_group[]" value="3" />DYK
+		<input type="checkbox" name="chk_group[]" value="4" />WALLACH
+		<input type="checkbox" name="chk_group[]" value="5" />NEWMAN
+		<input type="checkbox" name="chk_group[]" value="6" />SCHALL
+		<input type="checkbox" name="chk_group[]" value="7" />PROST
+		<input type="checkbox" name="chk_group[]" value="8" />LINN
+		<input type="checkbox" name="chk_group[]" value="9" />TARANTO
+		<input type="checkbox" name="chk_group[]" value="10" />MAYER
+		<input type="checkbox" name="chk_group[]" value="11" />RADER
+		<input type="checkbox" name="chk_group[]" value="12" />LOURIE
+		<input type="checkbox" name="chk_group[]" value="13" />CLEVENGER
+		<input type="checkbox" name="chk_group[]" value="14" />PLAGER
+		<input type="checkbox" name="chk_group[]" value="15" />MOORE
+		<input type="checkbox" name="chk_group[]" value="16" />O'MALLEY
+		<input type="checkbox" name="chk_group[]" value="17" />BENSON		
+</div>
+</div>
+
+</body>
+
+</html>

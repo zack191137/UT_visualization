@@ -1,0 +1,130 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="colorbrewer.js"></script>
+	<script src="../js/jquery/jquery.widget.min.js"></script>
+	<script src="../js/metro/metro-dropdown.js"></script>
+	<script src="../js/docs.js"></script>
+	<link rel="stylesheet" href="../css/metro-bootstrap.css">
+	<link rel="stylesheet" href="../css/docs.css">
+	<link href="../css/metro-bootstrap-responsive.css" rel="stylesheet">
+	<style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		#map {
+			width: 100%;
+			height: 100%;
+			background: black;
+		}
+		#menu {
+			position: absolute;
+			top: 5px;
+			left: 10px;
+			width: 200px;
+			height: 60px;
+			background: transparent;
+			z-index: 10;
+		}
+		#checkmenu {
+			position: absolute;
+			top: 5px;
+			left: 300px;
+			width: 300px;
+			height: 60px;
+			background: transparent;
+			z-index: 10;
+		}
+		#checkbox {
+			float: left;
+		}
+		.node {
+			stroke: #fff;
+			stroke-width: 1.5px;
+		}
+		.link {
+			stroke-width: 5;
+			stroke: #999;
+			stroke-opacity: 0.6;
+		}
+		.node.fixed {
+			fill: #f00;
+		}
+		label,
+		text {
+			pointer-events: none;
+			font-family: "Trebuchet MS";
+		}
+		div.tooltip {
+			position: absolute;
+			text-align: center;
+			
+			padding: 2px;
+			font: 12px sans-serif;
+			background: lightsteelblue;
+			border: 0px;
+			border-radius: 8px;
+			pointer-events: none;
+		}
+	</style>
+	<script type="text/javascript" src="test.js">
+	</script>
+	<title>About</title>
+</head>
+
+<body class="metro">
+	<header class="bg-dark" data-load="../recourse/header.html"></header>
+	<div class="grid container">
+		<div class="row">
+			<div class="span3 padding10 bg-grayLighter">
+				<p>
+					<label for="amount">Level range:</label>
+					<input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+				</p>
+				<div id="slider-range"></div>
+			</div>
+			<div class="span9 padding10 bg-grayLighter">
+				<input type="checkbox" name="chk_group[]" value="0" />CHEN
+				<input type="checkbox" name="chk_group[]" value="1" />BRYSON
+				<input type="checkbox" name="chk_group[]" value="2" />REYNA
+				<input type="checkbox" name="chk_group[]" value="3" />DYK
+				<input type="checkbox" name="chk_group[]" value="4" />WALLACH
+				<input type="checkbox" name="chk_group[]" value="5" />NEWMAN
+				<input type="checkbox" name="chk_group[]" value="6" />SCHALL
+				<input type="checkbox" name="chk_group[]" value="7" />PROST
+				<input type="checkbox" name="chk_group[]" value="8" />LINN
+				<br/>
+				<input type="checkbox" name="chk_group[]" value="9" />TARANTO
+				<input type="checkbox" name="chk_group[]" value="10" />MAYER
+				<input type="checkbox" name="chk_group[]" value="11" />RADER
+				<input type="checkbox" name="chk_group[]" value="12" />LOURIE
+				<input type="checkbox" name="chk_group[]" value="13" />CLEVENGER
+				<input type="checkbox" name="chk_group[]" value="14" />PLAGER
+				<input type="checkbox" name="chk_group[]" value="15" />MOORE
+				<input type="checkbox" name="chk_group[]" value="16" />O'MALLEY
+				<br/>
+				<input type="checkbox" name="chk_group[]" value="17" />BENSONs	<a class="button" id="selectall">SelectAll</a>	<a class="button" id="unselectall">unSelectAll</a>	
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12 padding20 bg-grayLighter">
+				<div id="network"></div>
+			</div>
+		</div>
+	</div>
+	<footer class="bg-dark no-margin no-padding">
+		<div class="container tertiary-text bg-dark fg-white">2012-2013, Metro UI CSS &copy; by <a href="mailto:sergey@pimenov.com.ua" class="fg-yellow">Sergey Pimenov</a>
+		</div>
+	</footer>
+</body>
+
+</html>
