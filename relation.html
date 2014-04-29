@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<title>Relation</title>
 	<script src="js/jquery/jquery.min.js"></script>
 	<script src="js/jquery/jquery.widget.min.js"></script>
 	<!-- <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
@@ -14,8 +15,8 @@
 	<style>
 
 .node {
-  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #bbb;
+  font: 300 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  fill: #6600FF;
 }
 
 .node:hover {
@@ -74,7 +75,7 @@ var bundle = d3.layout.bundle();
 
 var line = d3.svg.line.radial()
     .interpolate("bundle")
-    .tension(.85)
+    .tension(.5)
     .radius(function(d) { return d.y; })
     .angle(function(d) { return d.x / 180 * Math.PI; });
 

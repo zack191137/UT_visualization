@@ -1,10 +1,15 @@
 $(document).ready(function () {
 	var width = 800,
 		height = 500;
+	var a = [1, 1, 1, 1, 1, 1, 3, 3, 7, 9];
 	
-	var nvalues=new Array();
-	
-	var color = d3.scale.category10();
+	var z = d3.scale.ordinal()
+		.domain([1, 2, 3, 4, 5, 6, 7, 8, 9])
+		.range(colorbrewer.Blues[9]);
+		var y = d3.scale.ordinal()
+		.domain([1, 2, 3, 4, 5, 6, 7, 8, 9])
+		.range(colorbrewer.Reds[9]);
+	var color = d3.scale.category20();
 	var force = d3.layout.force()
 		.charge(2)
 		.gravity(2)
@@ -27,7 +32,21 @@ $(document).ready(function () {
 	function dragstart(d) {
 		d3.select(this).classed("fixed", d.fixed = true);
 	}
-		var values = new Array();
+	$("#slider-range").slider({
+		range: true,
+		min: 0,
+		max: 10,
+		values: [0, 10],
+		slide: function (event, ui) {
+			$("#amount").val("" + ui.values[0] + " - " + ui.values[1]);
+		},
+		change: function (event, ui) {
+						loadgraph();
+		}
+	});
+	$("#amount").val("" + $("#slider-range").slider("values", 0) +
+		" - " + $("#slider-range").slider("values", 1));
+	var values = new Array();
 	$($("input[name='chk_group[]']")).click(function () {
 		
 				loadgraph();
@@ -48,33 +67,32 @@ $(document).ready(function () {
 	});
 
 	function loadgraph() {
-		d3.selectAll('g').remove();
+	d3.selectAll('g').remove();
 		d3.selectAll('.link').remove();
+
 		nvalues=[];
 		values = [];
 		$.each($("input[name='chk_group[]']:checked"), function () {
 			values.push(parseInt($(this).val()));
 			
 		});
-		
-		
-
-		d3.json("s.php", function (error, graph) {
-			force
-				.nodes(graph.nodes)
-				.links(graph.links)
-				.start();
+		d3.json("r.php", function (error, graph) {
 			$.each(graph.links, function(){
 				nvalues.push(this.value);
 			})
 			var x = d3.scale.ordinal()
 			.domain(nvalues)
 			.range(colorbrewer.Oranges[9]);
-
 			var link = svg.selectAll(".link")
 				.data(graph.links)
 				.enter().append("line")
-								.filter(function (d) {
+				.filter(function (d) {
+					return Math.round(d3.quantile(a, d.value - 0.1) + 1) <= $("#slider-range").slider("values", 1)
+				})
+				.filter(function (d) {
+					return Math.round(d3.quantile(a, d.value - 0.1) + 1) >= $("#slider-range").slider("values", 0)
+				})
+				.filter(function (d) {
 					console.log(jQuery.inArray(d.source, values) >= 0);
 					return jQuery.inArray(d.source.index, values) >= 0
 				})
@@ -86,7 +104,7 @@ $(document).ready(function () {
 					return x(d.value);
 				})
 				.on("mouseover", function (d) {
-					d3.select(this).style("stroke","#00FF00");
+					d3.select(this).style("stroke","#FF0000");
 					div.transition()
 						.duration(200)
 						.style("opacity", .9);
@@ -97,7 +115,7 @@ $(document).ready(function () {
 				})
 				.on("mouseout", function (d) {
 					d3.select(this).style("stroke", function (d) {
-					return x(d.value);
+					return z(Math.round(d3.quantile(a, d.value - 0.1) + 1));
 				});
 
 					div.transition()
@@ -114,7 +132,7 @@ $(document).ready(function () {
 				.attr("class", "node")
 				.attr("r", 10)
 				.style("fill", function (d) {
-					
+					console.log(d.index);
 					return color(d.group);
 				})
 				.call(force.drag)

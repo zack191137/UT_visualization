@@ -1,7 +1,9 @@
 $(document).ready(function () {
 	var width = 800,
 		height = 500;
-	var a = [1, 1, 1, 1, 1, 1, 3, 3, 7, 9];
+		
+		var nvalues=new Array();
+	var a = [9,7,3,3,1, 1, 1, 1, 1, 1];
 	alert(Math.round(d3.quantile(a, 0.523)));
 	var z = d3.scale.ordinal()
 		.domain([1, 2, 3, 4, 5, 6, 7, 8, 9])

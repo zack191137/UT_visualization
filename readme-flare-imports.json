@@ -1,43 +1,208 @@
 [{
-	"name": "Judge.zhangzhang",
+	"name": "Judge.BENSON",
 	"size": 3938,
-	"imports": ["word.hello", "word.yes", "word.no"]
+	"imports": ["word.proper", "word.principle", "word.natural", "word.constitution", "word.effort", "word.precedent", "word.federal", "word.intentional", "word.right", "word.real", "word.properties", "word.just", "word.trinity", "word.doctrine", "word.necessity" ]
 }, 
 {
-	"name": "Judge.shangce",
+	"name": "Judge.BRYSON",
 	"size": 3938,
-	"imports": ["word.hello", "word.i", "word.you"]
+	"imports": ["word.properties"]
 }, 
 {
-	"name": "Judge.xiaoning",
+	"name": "Judge.CHEN",
 	"size": 3938,
-	"imports": ["word.hello", "word.yes", "word.you"]
+	"imports": ["word.circumstances", "word.congress", "word.construction", "word.natural", "word.business", "word.rule", "word.federal", "word.intentional", "word.judgment"]
 }, 
 {
-	"name": "Judge.kiko",
+	"name": "Judge.CLEVENGER",
 	"size": 3938,
-	"imports": ["word.no", "word.yes", "word.i"]
+	"imports": ["word.deci", "word.proper", "word.just"]
 },
 {
-	"name": "word.hello",
+	"name": "Judge.DYK",
+	"size": 3938,
+	"imports": ["word.deci", "word.congress", "word.principle","word.constitution", "word.federal", "word.infringement", "word.judgment"]
+}, 
+{
+	"name": "Judge.LINN",
+	"size": 3938,
+	"imports": ["word.deci", "word.congress", "word.construction", "word.principle", "word.effort", "word.business", "word.rule", "word.precedent", "word.infringement", "word.judgment"]
+}, 
+
+{
+	"name": "Judge.LOURIE",
+	"size": 3938,
+	"imports": ["word.natural", "word.properties", "word.just"]
+}, 
+
+{
+	"name": "Judge.MAYER",
+	"size": 3938,
+	"imports": ["word.deci", "word.proper", "word.congress"]
+}, 
+
+{
+	"name": "Judge.MOORE",
+	"size": 3938,
+	"imports": ["word.doctrine"]
+}, 
+
+{
+	"name": "Judge.NEWMAN",
+	"size": 3938,
+	"imports": ["word.intentional", "word.properties"]
+}, 
+
+
+{
+	"name": "Judge.PLAGER",
+	"size": 3938,
+	"imports": ["word.deci", "word.proper", "word.congress", "word.construction", "word.effort", "word.rule", "word.infringement", "word.properties", "word.just"]
+}, 
+
+{
+	"name": "Judge.PROST",
+	"size": 3938,
+	"imports": ["word.deci", "word.circumstances", "word.congress","word.principle", "word.rule", "word.infringement", "word.judgment", "word.just"]
+}, 
+
+{
+	"name": "Judge.RADER",
+	"size": 3938,
+	"imports": ["word.construction", "word.principle", "word.natural", "word.just"]
+}, 
+
+{
+	"name": "Judge.REYNA",
+	"size": 3938,
+	"imports": ["word.natural", "word.precedent"]
+}, 
+{
+	"name": "Judge.SCHALL",
+	"size": 3938,
+	"imports": ["word.deci", "word.natural", "word.constitution", "word.water", "word.federal", "word.right", "word.properties", "word.just"]
+}, 
+{
+	"name": "Judge.TARANTO",
+	"size": 3938,
+	"imports": ["word.deci", "word.circumstances", "word.congress", "word.constitution", "word.judgment"]
+}, 
+{
+	"name": "Judge.WALLACH",
+	"size": 3938,
+	"imports": ["word.precedent", "word.federal"]
+}, 
+{
+	"name": "Judge.OMALLEY",
+	"size": 3938,
+	"imports": ["word.construction", "word.infringement"]
+}, 
+
+
+
+
+
+
+
+
+
+
+{
+	"name": "word.deci",
 	"size": 3812,
 	"imports": []
 },
 {
-	"name": "word.you",
+	"name": "word.circumstances",
 	"size": 3812,
 	"imports": []
 },
 {
-	"name": "word.i",
+	"name": "word.proper",
 	"size": 3812,
 	"imports": []
 },{
-	"name": "word.yes",
+	"name": "word.congress",
 	"size": 3812,
 	"imports": []
 },{
-	"name": "word.no",
+	"name": "word.construction",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.principle",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.natural",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.constitution",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.effort",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.business",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.rule",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.water",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.precedent",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.federal",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.infringement",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.intentional",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.right",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.judgment",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.real",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.properties",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.just",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.trinity",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.doctrine",
+	"size": 3812,
+	"imports": []
+},{
+	"name": "word.necessity",
 	"size": 3812,
 	"imports": []
 }]
